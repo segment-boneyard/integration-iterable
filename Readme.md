@@ -1,8 +1,8 @@
-[![Build Status](https://circleci.com/gh/segmentio/integration-iterable.png)](https://circleci.com/gh/segmentio/integration-iterable)
+[![Build Status](https://circleci.com/gh/segmentio/integration-iterable/tree/master.png?style=badge)](https://circleci.com/gh/segmentio/integration-iterable/tree/master)
 
-# Iterable server-side integration.
+# integration-iterable
 
-Write me...
+Iterable server-side integration for Segment.
 
 
 ## License
