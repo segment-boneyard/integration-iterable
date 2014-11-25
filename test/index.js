@@ -26,7 +26,7 @@ describe('Iterable', function(){
       .endpoint('https://api.iterable.com/api')
       .channels(['server', 'mobile', 'client'])
       .ensure('settings.apiKey')
-      .ensure('message.email')
+      .ensure('message.userId')
       .retries(2);
   });
 
@@ -35,6 +35,7 @@ describe('Iterable', function(){
 
     beforeEach(function(){
       msg = {
+        userId: '7331',
         properties: {
           email: 'jd@example.com'
         }
@@ -46,8 +47,8 @@ describe('Iterable', function(){
       test.invalid(msg, settings);
     });
 
-    it('should be invalid when .email is missing', function(){
-      delete msg.properties.email;
+    it('should be invalid when .userId is missing', function(){
+      delete msg.userId;
       test.invalid(msg, settings);
     });
 

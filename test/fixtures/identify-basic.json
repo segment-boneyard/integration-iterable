@@ -11,11 +11,11 @@
   },
   "output": {
     "email": "jd@example.com",
+    "userId": "user-id",
     "dataFields": {
       "email": "jd@example.com",
       "created": "2014-01-01T00:00:00.000Z",
       "met": "2014-01-01T00:00:00.000Z",
-      "id": "user-id",
       "trait": true
     }
   }

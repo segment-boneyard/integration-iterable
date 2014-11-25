@@ -2,6 +2,7 @@
   "input": {
     "type": "track",
     "event": "some-event",
+    "userId": "some-uid",
     "timestamp": "2014",
     "properties": {
       "revenue": 19.99,
@@ -11,11 +12,12 @@
   },
   "output": {
     "eventName": "some-event",
+    "userId" : "some-uid",
     "email": "jd@example.com",
     "createdAt": 1388534400,
     "dataFields": {
-      "email": "jd@example.com",
       "prop": true,
+      "email": "jd@example.com",
       "amount": 19.99
     }
   }
