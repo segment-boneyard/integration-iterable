@@ -1,4 +1,9 @@
 
+1.0.2 / 2014-11-25
+==================
+
+  * Allow passing of userId instead of email to track calls
+
 1.0.1 / 2014-11-21
 ==================
 
