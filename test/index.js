@@ -26,8 +26,7 @@ describe('Iterable', function(){
       .endpoint('https://api.iterable.com/api')
       .channels(['server', 'mobile', 'client'])
       .ensure('settings.apiKey')
-      .ensure('message.userId')
-      .retries(2);
+      .ensure('message.userId');
   });
 
   describe('.validate()', function(){
