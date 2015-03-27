@@ -195,7 +195,8 @@ exports.page = function(options){
     category: 'Support',
     properties: {
       url: 'https://segment.io/docs',
-      title: 'Analytics.js - Segment.io'
+      title: 'Analytics.js - Segment.io',
+      email: email
     },
     context: {
       ip: '12.212.12.49'

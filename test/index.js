@@ -116,4 +116,44 @@ describe('Iterable', function(){
         .error('cannot POST /api/users/update (401)', done);
     });
   });
+
+  describe('.page()', function(){
+    it('should not track automatically', function (done) {
+      test
+        .set(settings)
+        .page(helpers.page())
+        .requests(0)
+        .end(done);
+    });
+
+    it('should track all pages', function (done) {
+      test
+        .set(settings)
+        .set({ trackAllPages: true })
+        .page(helpers.page())
+        .requests(1)
+        .expects(200)
+        .end(done);
+    });
+
+    it('should track named pages', function (done) {
+      test
+        .set(settings)
+        .set({ trackNamedPages: true })
+        .page(helpers.page())
+        .requests(1)
+        .expects(200)
+        .end(done);
+    });
+
+    it('should track category pages', function (done) {
+      test
+        .set(settings)
+        .set({ trackCategorizedPages: true })
+        .page(helpers.page())
+        .requests(1)
+        .expects(200)
+        .end(done);
+    });
+  });
 });
