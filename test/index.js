@@ -51,19 +51,6 @@ describe('Iterable', function(){
       test.invalid(msg, settings);
     });
 
-    it('should be invalid identify when traits.email is missing', function(){
-      var msg = {
-        type: 'identify',
-        userId: 'user-id',
-        timestamp: '2014',
-        traits: {
-          created: '2014-01-01',
-          trait: true
-        }
-      };
-      test.invalid(msg, settings);
-    });
-
     it('should be valid when .apiKey is given', function(){
       test.valid(msg, settings);
     });
