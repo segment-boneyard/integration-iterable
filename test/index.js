@@ -15,7 +15,7 @@ describe('Iterable', function(){
 
   beforeEach(function(){
     payload = {};
-    settings = { apiKey: 'a1b0ad8c09cb419498ab90c2b005ed6a' };
+    settings = { apiKey: '124175f3654446babf5b5966e232d91d' };
     iterable = new Iterable(settings);
     test = Test(iterable, __dirname);
   });
@@ -71,7 +71,7 @@ describe('Iterable', function(){
   });
 
   describe('.track()', function(){
-    it('should get a good response from the API', function (done) {
+    it('should get a good response from the API', function(done){
       test
         .set(settings)
         .track(helpers.track())
@@ -88,7 +88,7 @@ describe('Iterable', function(){
   });
 
   describe('.identify()', function(){
-    it('should get a good response from the API', function (done) {
+    it('should get a good response from the API', function(done){
       test
         .set(settings)
         .identify(helpers.identify())
@@ -105,7 +105,7 @@ describe('Iterable', function(){
   });
 
   describe('.page()', function(){
-    it('should not track automatically', function (done) {
+    it('should not track automatically', function(done){
       test
         .set(settings)
         .page(helpers.page())
@@ -113,7 +113,7 @@ describe('Iterable', function(){
         .end(done);
     });
 
-    it('should track all pages', function (done) {
+    it('should track all pages', function(done){
       test
         .set(settings)
         .set({ trackAllPages: true })
@@ -123,7 +123,7 @@ describe('Iterable', function(){
         .end(done);
     });
 
-    it('should track named pages', function (done) {
+    it('should track named pages', function(done){
       test
         .set(settings)
         .set({ trackNamedPages: true })
@@ -133,7 +133,7 @@ describe('Iterable', function(){
         .end(done);
     });
 
-    it('should track category pages', function (done) {
+    it('should track category pages', function(done){
       test
         .set(settings)
         .set({ trackCategorizedPages: true })
