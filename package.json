@@ -13,9 +13,11 @@
     "test": "make test"
   },
   "dependencies": {
+    "@ndhoule/foldl": "^1.0.3",
     "component-clone": "^0.2.2",
     "isodate-traverse": "^0.3.2",
     "obj-case": "^0.1.1",
+    "reject": "0.0.1",
     "segmentio-integration": "^3.0.5",
     "unix-time": "^1.0.1"
   },
