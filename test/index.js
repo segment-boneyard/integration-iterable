@@ -61,6 +61,14 @@ describe('Iterable', function(){
       it('should map basic track', function(){
         test.maps('track-basic');
       });
+
+      it('should map update cart track', function(){
+        test.maps('track-update-cart');
+      });
+
+      it('should map purchase track', function(){
+        test.maps('track-purchase');
+      });
     });
 
     describe('identify', function(){
