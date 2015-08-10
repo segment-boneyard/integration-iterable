@@ -84,6 +84,7 @@ describe('Iterable', function(){
         .set(settings)
         .track(helpers.track())
         .expects(200)
+        .pathname('/api/events/track')
         .end(done);
     });
 
@@ -92,6 +93,102 @@ describe('Iterable', function(){
         .set({ apiKey: 'x' })
         .track({})
         .error('cannot POST /api/events/track (401)', done);
+    });
+
+    it('should map Add/Remove Item to updateCart if there is a cart provided', function(done){
+      test
+        .set(settings)
+        .track({
+          "type": "track",
+          "event": "Added Product",
+          "userId": "some-uid",
+          "timestamp": "2014",
+          "properties": {
+            "revenue": 19.99,
+            "email": "jd@example.com",
+            "prop": true,
+            "cart": [
+              {
+                "id": "foo-id",
+                "sku": "foo-sku",
+                "name": "foo-name",
+                "price": 5.5,
+                "quantity": 2,
+                "category": "foo-category"
+              }
+            ]
+          }
+        })
+        .expects(200)
+        .pathname('/api/commerce/updateCart')
+        .end(done);
+    });
+
+    it('should not map Add/Remove Item to updateCart if there is no cart provided', function(done){
+      test
+        .set(settings)
+        .track({
+          "type": "track",
+          "event": "Added Product",
+          "userId": "some-uid",
+          "timestamp": "2014",
+          "properties": {
+            "revenue": 19.99,
+            "email": "jd@example.com",
+            "prop": true
+          }
+        })
+        .expects(200)
+        .pathname('/api/events/track')
+        .end(done);
+    });
+
+    it('should map Completed Order to trackPurchase if there is a cart provided', function(done){
+      test
+        .set(settings)
+        .track({
+          "type": "track",
+          "event": "Completed Order",
+          "userId": "some-uid",
+          "timestamp": "2014",
+          "properties": {
+            "revenue": 19.99,
+            "email": "jd@example.com",
+            "prop": true,
+            "cart": [
+              {
+                "id": "foo-id",
+                "sku": "foo-sku",
+                "name": "foo-name",
+                "price": 5.5,
+                "quantity": 2,
+                "category": "foo-category"
+              }
+            ]
+          }
+        })
+        .expects(200)
+        .pathname('/api/commerce/trackPurchase')
+        .end(done);
+    });
+
+    it('should not map Completed Order to trackPurchase if there is no cart provided', function(done){
+      test
+        .set(settings)
+        .track({
+          "type": "track",
+          "event": "Completed Order",
+          "userId": "some-uid",
+          "timestamp": "2014",
+          "properties": {
+            "revenue": 19.99,
+            "email": "jd@example.com",
+            "prop": true
+          }
+        })
+        .expects(200)
+        .pathname('/api/events/track')
+        .end(done);
     });
   });
 
