@@ -6,6 +6,7 @@ var time = require('unix-time');
 var should = require('should');
 var assert = require('assert');
 var Iterable = require('..');
+var objCase = require('obj-case');
 
 describe('Iterable', function(){
   var settings;
@@ -96,96 +97,52 @@ describe('Iterable', function(){
     });
 
     it('should map Add/Remove Item to updateCart if there is a cart provided', function(done){
+      var json = test.fixture('track-update-cart');
+
       test
         .set(settings)
-        .track({
-          "type": "track",
-          "event": "Added Product",
-          "userId": "some-uid",
-          "timestamp": "2014",
-          "properties": {
-            "revenue": 19.99,
-            "email": "jd@example.com",
-            "prop": true,
-            "cart": [
-              {
-                "id": "foo-id",
-                "sku": "foo-sku",
-                "name": "foo-name",
-                "price": 5.5,
-                "quantity": 2,
-                "category": "foo-category"
-              }
-            ]
-          }
-        })
+        .track(json.input)
+        .sends(json.output)
         .expects(200)
         .pathname('/api/commerce/updateCart')
         .end(done);
     });
 
     it('should not map Add/Remove Item to updateCart if there is no cart provided', function(done){
+      var json = test.fixture('track-update-cart');
+      var input = json.input;
+      input = objCase.del(input, 'properties.cart');
+      input = objCase.del(input, 'properties.products');
+
       test
         .set(settings)
-        .track({
-          "type": "track",
-          "event": "Added Product",
-          "userId": "some-uid",
-          "timestamp": "2014",
-          "properties": {
-            "revenue": 19.99,
-            "email": "jd@example.com",
-            "prop": true
-          }
-        })
+        .track(input)
         .expects(200)
         .pathname('/api/events/track')
         .end(done);
     });
 
     it('should map Completed Order to trackPurchase if there is a cart provided', function(done){
+      var json = test.fixture('track-purchase');
+
       test
         .set(settings)
-        .track({
-          "type": "track",
-          "event": "Completed Order",
-          "userId": "some-uid",
-          "timestamp": "2014",
-          "properties": {
-            "revenue": 19.99,
-            "email": "jd@example.com",
-            "prop": true,
-            "cart": [
-              {
-                "id": "foo-id",
-                "sku": "foo-sku",
-                "name": "foo-name",
-                "price": 5.5,
-                "quantity": 2,
-                "category": "foo-category"
-              }
-            ]
-          }
-        })
+        .track(json.input)
+        .sends(json.output)
         .expects(200)
         .pathname('/api/commerce/trackPurchase')
         .end(done);
     });
 
     it('should not map Completed Order to trackPurchase if there is no cart provided', function(done){
+      var json = test.fixture('track-purchase');
+      var input = json.input;
+      input = objCase.del(input, 'properties.cart');
+      input = objCase.del(input, 'properties.products');
+
       test
         .set(settings)
-        .track({
-          "type": "track",
-          "event": "Completed Order",
-          "userId": "some-uid",
-          "timestamp": "2014",
-          "properties": {
-            "revenue": 19.99,
-            "email": "jd@example.com",
-            "prop": true
-          }
-        })
+        .track(input)
         .expects(200)
         .pathname('/api/events/track')
         .end(done);
