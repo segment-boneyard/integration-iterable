@@ -15,7 +15,8 @@
           "name": "foo-name",
           "price": 5.5,
           "quantity": 2,
-          "category": "foo-category"
+          "category": "foo-category",
+          "color": "red"
         }
       ]
     }
@@ -34,7 +35,10 @@
         "name": "foo-name",
         "price": 5.5,
         "quantity": 2,
-        "category": "foo-category"
+        "dataFields": {
+          "category": "foo-category",
+          "color": "red"
+        }
       }
     ],
     "total": 11,
