@@ -8,6 +8,7 @@
       "revenue": 19.99,
       "email": "jd@example.com",
       "prop": true,
+      "total": 11,
       "cart": [
         {
           "id": "foo-id",
