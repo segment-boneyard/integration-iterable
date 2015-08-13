@@ -122,7 +122,7 @@ describe('Iterable', function(){
         .end(done);
     });
 
-    it('should map Completed Order to trackPurchase if there is a cart provided', function(done){
+    it('should map Completed Order to trackPurchase', function(done){
       var json = test.fixture('track-purchase');
 
       test
@@ -131,20 +131,6 @@ describe('Iterable', function(){
         .sends(json.output)
         .expects(200)
         .pathname('/api/commerce/trackPurchase')
-        .end(done);
-    });
-
-    it('should not map Completed Order to trackPurchase if there is no cart provided', function(done){
-      var json = test.fixture('track-purchase');
-      var input = json.input;
-      input = objCase.del(input, 'properties.cart');
-      input = objCase.del(input, 'properties.products');
-
-      test
-        .set(settings)
-        .track(input)
-        .expects(200)
-        .pathname('/api/events/track')
         .end(done);
     });
   });

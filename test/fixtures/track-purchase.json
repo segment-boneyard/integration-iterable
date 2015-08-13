@@ -24,7 +24,6 @@
   },
   "output": {
     "createdAt": 1388534400,
-    "isPurchase": true,
     "user": {
       "email": "jd@example.com",
       "userId": "some-uid"

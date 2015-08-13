@@ -22,7 +22,6 @@
     }
   },
   "output": {
-    "isUpdateCart": true,
     "user": {
       "email": "jd@example.com",
       "userId": "some-uid"
