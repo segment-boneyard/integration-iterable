@@ -8,7 +8,7 @@
       "revenue": 19.99,
       "email": "jd@example.com",
       "prop": true,
-      "cart": [
+      "products": [
         {
           "id": "foo-id",
           "sku": "foo-sku",
@@ -33,8 +33,8 @@
         "name": "foo-name",
         "price": 5.5,
         "quantity": 2,
+        "categories": [ "foo-category" ],
         "dataFields": {
-          "category": "foo-category",
           "color": "red"
         }
       }
