@@ -63,8 +63,12 @@ describe('Iterable', function(){
         test.maps('track-basic');
       });
 
-      it('should map update cart track', function(){
-        test.maps('track-update-cart');
+      it('should map added product track', function(){
+        test.maps('track-added-product');
+      });
+
+      it('should map removed product track', function(){
+        test.maps('track-removed-product');
       });
 
       it('should map purchase track', function(){
@@ -96,8 +100,8 @@ describe('Iterable', function(){
         .error('cannot POST /api/events/track (401)', done);
     });
 
-    it('should map Add/Remove Item to updateCart if there is a cart provided', function(done){
-      var json = test.fixture('track-update-cart');
+    it('should map Added Product to updateCart if there is a cart provided', function(done){
+      var json = test.fixture('track-added-product');
 
       test
         .set(settings)
@@ -108,8 +112,33 @@ describe('Iterable', function(){
         .end(done);
     });
 
-    it('should not map Add/Remove Item to updateCart if there is no cart provided', function(done){
-      var json = test.fixture('track-update-cart');
+    it('should not map Added Product to updateCart if there is no cart provided', function(done){
+      var json = test.fixture('track-added-product');
+      var input = json.input;
+      input = objCase.del(input, 'properties.products');
+
+      test
+        .set(settings)
+        .track(input)
+        .expects(200)
+        .pathname('/api/events/track')
+        .end(done);
+    });
+
+    it('should map Removed Product to updateCart if there is a cart provided', function(done){
+      var json = test.fixture('track-removed-product');
+
+      test
+        .set(settings)
+        .track(json.input)
+        .sends(json.output)
+        .expects(200)
+        .pathname('/api/commerce/updateCart')
+        .end(done);
+    });
+
+    it('should not map Removed Product to updateCart if there is no cart provided', function(done){
+      var json = test.fixture('track-removed-product');
       var input = json.input;
       input = objCase.del(input, 'properties.products');
 
