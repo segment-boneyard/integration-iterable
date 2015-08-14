@@ -111,7 +111,6 @@ describe('Iterable', function(){
     it('should not map Add/Remove Item to updateCart if there is no cart provided', function(done){
       var json = test.fixture('track-update-cart');
       var input = json.input;
-      input = objCase.del(input, 'properties.cart');
       input = objCase.del(input, 'properties.products');
 
       test
