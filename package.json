@@ -17,7 +17,8 @@
     "isodate-traverse": "^0.3.2",
     "obj-case": "^0.1.1",
     "segmentio-integration": "^3.0.5",
-    "unix-time": "^1.0.1"
+    "unix-time": "^1.0.1",
+    "underscore": "~1.8.3"
   },
   "devDependencies": {
     "istanbul": "0.x",

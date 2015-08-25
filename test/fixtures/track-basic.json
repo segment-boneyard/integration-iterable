@@ -5,6 +5,7 @@
     "userId": "some-uid",
     "timestamp": "2014",
     "properties": {
+      "amount": 29.99,
       "revenue": 19.99,
       "email": "jd@example.com",
       "prop": true
@@ -18,7 +19,8 @@
     "dataFields": {
       "prop": true,
       "email": "jd@example.com",
-      "amount": 19.99
+      "amount": 29.99,
+      "revenue": 19.99
     }
   }
 }

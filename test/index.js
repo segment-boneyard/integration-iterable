@@ -6,6 +6,7 @@ var time = require('unix-time');
 var should = require('should');
 var assert = require('assert');
 var Iterable = require('..');
+var objCase = require('obj-case');
 
 describe('Iterable', function(){
   var settings;
@@ -61,6 +62,18 @@ describe('Iterable', function(){
       it('should map basic track', function(){
         test.maps('track-basic');
       });
+
+      it('should map added product track', function(){
+        test.maps('track-added-product');
+      });
+
+      it('should map removed product track', function(){
+        test.maps('track-removed-product');
+      });
+
+      it('should map purchase track', function(){
+        test.maps('track-purchase');
+      });
     });
 
     describe('identify', function(){
@@ -76,6 +89,7 @@ describe('Iterable', function(){
         .set(settings)
         .track(helpers.track())
         .expects(200)
+        .pathname('/api/events/track')
         .end(done);
     });
 
@@ -84,6 +98,68 @@ describe('Iterable', function(){
         .set({ apiKey: 'x' })
         .track({})
         .error('cannot POST /api/events/track (401)', done);
+    });
+
+    it('should map Added Product to updateCart if there is a cart provided', function(done){
+      var json = test.fixture('track-added-product');
+
+      test
+        .set(settings)
+        .track(json.input)
+        .sends(json.output)
+        .expects(200)
+        .pathname('/api/commerce/updateCart')
+        .end(done);
+    });
+
+    it('should not map Added Product to updateCart if there is no cart provided', function(done){
+      var json = test.fixture('track-added-product');
+      var input = json.input;
+      input = objCase.del(input, 'properties.products');
+
+      test
+        .set(settings)
+        .track(input)
+        .expects(200)
+        .pathname('/api/events/track')
+        .end(done);
+    });
+
+    it('should map Removed Product to updateCart if there is a cart provided', function(done){
+      var json = test.fixture('track-removed-product');
+
+      test
+        .set(settings)
+        .track(json.input)
+        .sends(json.output)
+        .expects(200)
+        .pathname('/api/commerce/updateCart')
+        .end(done);
+    });
+
+    it('should not map Removed Product to updateCart if there is no cart provided', function(done){
+      var json = test.fixture('track-removed-product');
+      var input = json.input;
+      input = objCase.del(input, 'properties.products');
+
+      test
+        .set(settings)
+        .track(input)
+        .expects(200)
+        .pathname('/api/events/track')
+        .end(done);
+    });
+
+    it('should map Completed Order to trackPurchase', function(done){
+      var json = test.fixture('track-purchase');
+
+      test
+        .set(settings)
+        .track(json.input)
+        .sends(json.output)
+        .expects(200)
+        .pathname('/api/commerce/trackPurchase')
+        .end(done);
     });
   });
 
