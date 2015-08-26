@@ -1,4 +1,9 @@
 
+1.2.0 / 2015-08-26
+==================
+
+  * map ecommerce calls to iterable commerce api
+
 1.1.0 / 2015-04-03
 ==================
 
