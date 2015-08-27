@@ -1,4 +1,9 @@
 
+1.2.1 / 2015-08-27
+==================
+
+  * still send call to updateCart api when products is an empty array
+
 1.2.0 / 2015-08-26
 ==================
 
