@@ -43,7 +43,7 @@
     ],
     "total": 11,
     "dataFields": {
-      "amount": 19.99,
+      "revenue": 19.99,
       "email": "jd@example.com",
       "prop": true
     }
