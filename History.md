@@ -1,4 +1,9 @@
 
+1.2.2 / 2015-09-02
+==================
+
+  * remove revenue->amount alias per iterable request
+
 1.2.1 / 2015-08-27
 ==================
 
