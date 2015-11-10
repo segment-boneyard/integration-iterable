@@ -128,6 +128,7 @@
         "dataFields": {
           "color": "royal_blue",
           "gender": "male",
+          "image_url": "https://loyalist.s3.amazonaws.com/orders/R550311537/line-items/131/images/french_terry_light_weight_pullover_hoodie/front/royal_blue/capybara.jpg",
           "size": "xl"
         }
       },
@@ -142,6 +143,7 @@
         "dataFields": {
           "color": "light_blue",
           "gender": "male",
+          "image_url": "https://loyalist.s3.amazonaws.com/orders/R550311537/line-items/133/images/mens_tee/front/light_blue/capybara.jpg",
           "size": "xl"
         }
       },
@@ -156,6 +158,7 @@
         "dataFields": {
           "color": "light_blue",
           "gender": "male",
+          "image_url": "https://loyalist.s3.amazonaws.com/orders/R550311537/line-items/136/images/mens_tee/front/light_blue/capybara.jpg",
           "size": "l"
         }
       },
@@ -170,6 +173,7 @@
         "dataFields": {
           "color": "heather_grey",
           "gender": "male",
+          "image_url": "https://loyalist.s3.amazonaws.com/orders/R550311537/line-items/139/images/mens_tee/front/heather_grey/capybara.jpg",
           "size": "l"
         }
       },
@@ -184,6 +188,7 @@
         "dataFields": {
           "color": "royal_blue",
           "gender": "male",
+          "image_url": "https://loyalist.s3.amazonaws.com/orders/R550311537/line-items/148/images/zip_hoodie_light/front/royal_blue/capybara.jpg",
           "size": "l"
         }
       }
