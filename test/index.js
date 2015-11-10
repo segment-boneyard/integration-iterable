@@ -164,6 +164,18 @@ describe('Iterable', function(){
         .pathname('/api/commerce/trackPurchase')
         .end(done);
     });
+
+    it('should map a more complex Completed Order to trackPurchase', function(done){
+      var json = test.fixture('track-purchase2');
+
+      test
+        .set(settings)
+        .track(json.input)
+        .sends(json.output)
+        .expects(200)
+        .pathname('/api/commerce/trackPurchase')
+        .end(done);
+    });
   });
 
   describe('.identify()', function(){
