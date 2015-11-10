@@ -1,0 +1,222 @@
+{
+  "input": {
+    "anonymousId": "test@iterable.com",
+    "context": {
+      "library": {
+        "name": "analytics-ruby",
+        "version": "2.0.13"
+      }
+    },
+    "event": "Completed Order",
+    "integrations": {},
+    "messageId": "7d050283-681c-4037-a67b-9960451bf130",
+    "properties": {
+      "billing_address": {
+        "address1": "3688 S 2690 E",
+        "address2": "",
+        "city": "ST George",
+        "country": "United States",
+        "firstname": "Crystal",
+        "lastname": "Burton",
+        "state": "Utah",
+        "zipcode": "84799"
+      },
+      "currency": "USD",
+      "discount": 0,
+      "email": "test@iterable.com",
+      "orderId": "R550311537",
+      "products": [
+        {
+          "category": "pullover_hoodie",
+          "color": "royal_blue",
+          "gender": "male",
+          "id": "c94cfe418822",
+          "image_url": "https://loyalist.s3.amazonaws.com/orders/R550311537/line-items/131/images/french_terry_light_weight_pullover_hoodie/front/royal_blue/capybara.jpg",
+          "name": "Lacrosse Force Standard Sweatshirt",
+          "price": "39.1",
+          "quantity": 1,
+          "size": "xl",
+          "sku": "10484504"
+        },
+        {
+          "category": "t_shirt",
+          "color": "light_blue",
+          "gender": "male",
+          "id": "11f01d960898",
+          "image_url": "https://loyalist.s3.amazonaws.com/orders/R550311537/line-items/133/images/mens_tee/front/light_blue/capybara.jpg",
+          "name": "LF Line T",
+          "price": "20.2",
+          "quantity": 1,
+          "size": "xl",
+          "sku": "10042604"
+        },
+        {
+          "category": "t_shirt",
+          "color": "light_blue",
+          "gender": "male",
+          "id": "11f01d960898",
+          "image_url": "https://loyalist.s3.amazonaws.com/orders/R550311537/line-items/136/images/mens_tee/front/light_blue/capybara.jpg",
+          "name": "LF Line T",
+          "price": "20.2",
+          "quantity": 1,
+          "size": "l",
+          "sku": "10042603"
+        },
+        {
+          "category": "t_shirt",
+          "color": "heather_grey",
+          "gender": "male",
+          "id": "5722c9adfaf5",
+          "image_url": "https://loyalist.s3.amazonaws.com/orders/R550311537/line-items/139/images/mens_tee/front/heather_grey/capybara.jpg",
+          "name": "LF Logo Tee",
+          "price": "30.0",
+          "quantity": 1,
+          "size": "l",
+          "sku": "10042103"
+        },
+        {
+          "category": "zip_hoodie",
+          "color": "royal_blue",
+          "gender": "male",
+          "id": "405f2a05388d",
+          "image_url": "https://loyalist.s3.amazonaws.com/orders/R550311537/line-items/148/images/zip_hoodie_light/front/royal_blue/capybara.jpg",
+          "name": "LF Zip Hoodie",
+          "price": "42.4",
+          "quantity": 1,
+          "size": "l",
+          "sku": "10494503"
+        }
+      ],
+      "revenue": "151.9",
+      "shipping": "22.99",
+      "shipping_address": {
+        "address1": "3688 S 2690 E",
+        "address2": "",
+        "city": "ST George",
+        "country": "United States",
+        "firstname": "Crystal",
+        "lastname": "Burton",
+        "state": "Utah",
+        "zipcode": "84799"
+      },
+      "tax": "0.0",
+      "total": "174.89"
+    },
+    "timestamp": "2015-11-09T17:46:15.995Z",
+    "type": "track",
+    "userId": null,
+    "writeKey": "JogL4mPQVHHs2NE7FSgDqBHA2xOYRXnx",
+    "sentAt": "2015-11-09T17:46:15.330Z",
+    "receivedAt": "2015-11-09T17:46:15.996Z",
+    "originalTimestamp": "2015-11-09T17:46:15.329+00:00"
+  },
+  "output": {
+    "createdAt": 1447091175,
+    "user": {
+      "email": "test@iterable.com",
+      "userId": null
+    },
+    "items": [
+      {
+        "id": "c94cfe418822",
+        "sku": "10484504",
+        "name": "Lacrosse Force Standard Sweatshirt",
+        "price": 39.1,
+        "quantity": 1,
+        "categories": ["pullover_hoodie"],
+        "imageUrl": "https://loyalist.s3.amazonaws.com/orders/R550311537/line-items/131/images/french_terry_light_weight_pullover_hoodie/front/royal_blue/capybara.jpg",
+        "dataFields": {
+          "color": "royal_blue",
+          "gender": "male",
+          "size": "xl"
+        }
+      },
+      {
+        "id": "11f01d960898",
+        "sku": "10042604",
+        "name": "LF Line T",
+        "price": 20.2,
+        "quantity": 1,
+        "categories": ["t_shirt"],
+        "imageUrl": "https://loyalist.s3.amazonaws.com/orders/R550311537/line-items/133/images/mens_tee/front/light_blue/capybara.jpg",
+        "dataFields": {
+          "color": "light_blue",
+          "gender": "male",
+          "size": "xl"
+        }
+      },
+      {
+        "id": "11f01d960898",
+        "sku": "10042603",
+        "name": "LF Line T",
+        "price": 20.2,
+        "quantity": 1,
+        "categories": ["t_shirt"],
+        "imageUrl": "https://loyalist.s3.amazonaws.com/orders/R550311537/line-items/136/images/mens_tee/front/light_blue/capybara.jpg",
+        "dataFields": {
+          "color": "light_blue",
+          "gender": "male",
+          "size": "l"
+        }
+      },
+      {
+        "id": "5722c9adfaf5",
+        "sku": "10042103",
+        "name": "LF Logo Tee",
+        "price": 30.0,
+        "quantity": 1,
+        "categories": ["t_shirt"],
+        "imageUrl": "https://loyalist.s3.amazonaws.com/orders/R550311537/line-items/139/images/mens_tee/front/heather_grey/capybara.jpg",
+        "dataFields": {
+          "color": "heather_grey",
+          "gender": "male",
+          "size": "l"
+        }
+      },
+      {
+        "id": "405f2a05388d",
+        "sku": "10494503",
+        "name": "LF Zip Hoodie",
+        "price": 42.4,
+        "quantity": 1,
+        "categories": ["zip_hoodie"],
+        "imageUrl": "https://loyalist.s3.amazonaws.com/orders/R550311537/line-items/148/images/zip_hoodie_light/front/royal_blue/capybara.jpg",
+        "dataFields": {
+          "color": "royal_blue",
+          "gender": "male",
+          "size": "l"
+        }
+      }
+    ],
+    "total": 174.89,
+    "dataFields": {
+      "billing_address": {
+        "address1": "3688 S 2690 E",
+        "address2": "",
+        "city": "ST George",
+        "country": "United States",
+        "firstname": "Crystal",
+        "lastname": "Burton",
+        "state": "Utah",
+        "zipcode": "84799"
+      },
+      "currency": "USD",
+      "discount": 0,
+      "email": "test@iterable.com",
+      "orderId": "R550311537",
+      "amount": "151.9",
+      "shipping": "22.99",
+      "shipping_address": {
+        "address1": "3688 S 2690 E",
+        "address2": "",
+        "city": "ST George",
+        "country": "United States",
+        "firstname": "Crystal",
+        "lastname": "Burton",
+        "state": "Utah",
+        "zipcode": "84799"
+      },
+      "tax": "0.0"
+    }
+  }
+}
