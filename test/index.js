@@ -7,6 +7,7 @@ var should = require('should');
 var assert = require('assert');
 var Iterable = require('..');
 var objCase = require('obj-case');
+var mapper = require('../lib/mapper');
 
 describe('Iterable', function(){
   var settings;
@@ -19,6 +20,7 @@ describe('Iterable', function(){
     settings = { apiKey: '124175f3654446babf5b5966e232d91d' };
     iterable = new Iterable(settings);
     test = Test(iterable, __dirname);
+    test.mapper(mapper);
   });
 
   it('should have correct settings', function(){
@@ -72,7 +74,7 @@ describe('Iterable', function(){
       });
 
       it('should map purchase track', function(){
-        test.maps('track-purchase2');
+        test.maps('track-purchase');
       });
     });
 
@@ -85,9 +87,10 @@ describe('Iterable', function(){
 
   describe('.track()', function(){
     it('should get a good response from the API', function(done){
+      var json = test.fixture('track-basic');
       test
         .set(settings)
-        .track(helpers.track())
+        .track(json.input)
         .expects(200)
         .pathname('/api/events/track')
         .end(done);

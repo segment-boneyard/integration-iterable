@@ -204,7 +204,7 @@
       "discount": 0,
       "email": "test@iterable.com",
       "orderId": "R550311537",
-      "amount": "151.9",
+      "revenue": "151.9",
       "shipping": "22.99",
       "shipping_address": {
         "address1": "3688 S 2690 E",

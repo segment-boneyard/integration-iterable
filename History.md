@@ -1,4 +1,19 @@
 
+1.2.2 / 2015-09-02
+==================
+
+  * remove revenue->amount alias per iterable request
+
+1.2.1 / 2015-08-27
+==================
+
+  * still send call to updateCart api when products is an empty array
+
+1.2.0 / 2015-08-26
+==================
+
+  * map ecommerce calls to iterable commerce api
+
 1.1.0 / 2015-04-03
 ==================
 
