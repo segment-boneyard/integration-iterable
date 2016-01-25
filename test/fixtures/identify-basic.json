@@ -16,7 +16,8 @@
       "email": "jd@example.com",
       "created": "2014-01-01T00:00:00.000Z",
       "met": "2014-01-01T00:00:00.000Z",
-      "trait": true
+      "trait": true,
+      "profileUpdatedAt": "2014-01-01 00:00:00 +00:00"
     }
   }
 }

@@ -1,0 +1,53 @@
+{
+  "input": {
+    "anonymousId": "2fceec23-2f09-4118-9941-76e6f84a3548",
+    "context": {
+      "library": {
+        "name": "analytics.js",
+        "version": "2.8.7"
+      },
+      "page": {
+        "path": "/",
+        "referrer": "https://www.google.co.uk/",
+        "search": "",
+        "title": "Choose Recipes, Get Fresh And Organic Ingredients Delivered & Cook Healthy Food",
+        "url": "https://www.gousto.co.uk/"
+      },
+      "userAgent": "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36",
+      "ip": "1.1.1.1",
+      "timezone": "America/New_York"
+    },
+    "integrations": {},
+    "messageId": "9be52cb7-c645-4979-b06c-0394bbefd0ad",
+    "receivedAt": "2015-04-15T10:46:45.818Z",
+    "sentAt": "2015-04-15T10:46:50.330Z",
+    "timestamp": "2015-04-15T10:46:45.808Z",
+    "traits": {
+      "email": "foo@example.com",
+      "sampleTrait": "bar",
+      "userAgent": "THIS ONE, NOT THE ONE FROM CONTEXT"
+    },
+    "type": "identify",
+    "userId": null,
+    "originalTimestamp": "2015-04-15T10:46:50.320Z"
+  },
+  "output": {
+    "email": "foo@example.com",
+    "userId": null,
+    "dataFields": {
+      "email": "foo@example.com",
+      "sampleTrait": "bar",
+      "page": {
+        "path": "/",
+        "referrer": "https://www.google.co.uk/",
+        "search": "",
+        "title": "Choose Recipes, Get Fresh And Organic Ingredients Delivered & Cook Healthy Food",
+        "url": "https://www.gousto.co.uk/"
+      },
+      "userAgent": "THIS ONE, NOT THE ONE FROM CONTEXT",
+      "ip": "1.1.1.1",
+      "timeZone": "America/New_York",
+      "profileUpdatedAt": "2015-04-15 10:46:45 +00:00"
+    }
+  }
+}
