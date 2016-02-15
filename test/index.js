@@ -28,8 +28,7 @@ describe('Iterable', function(){
       .name('Iterable')
       .endpoint('https://api.iterable.com/api')
       .channels(['server', 'mobile', 'client'])
-      .ensure('settings.apiKey')
-      .ensure('message.userId');
+      .ensure('settings.apiKey');
   });
 
   describe('.validate()', function(){
@@ -49,12 +48,23 @@ describe('Iterable', function(){
       test.invalid(msg, settings);
     });
 
-    it('should be invalid when .userId is missing', function(){
+    it('should be valid when .apiKey is given', function(){
+      test.valid(msg, settings);
+    });
+
+    it('should be invalid when both .userId and .email are missing', function(){
       delete msg.userId;
+      delete msg.properties.email;
       test.invalid(msg, settings);
     });
 
-    it('should be valid when .apiKey is given', function(){
+    it('should be valid when .userId is missing but .email is present', function(){
+      delete msg.userId;
+      test.valid(msg, settings);
+    });
+
+    it('should be valid when .userId is present but .email is missing', function(){
+      delete msg.properties.email;
       test.valid(msg, settings);
     });
   });
@@ -63,6 +73,14 @@ describe('Iterable', function(){
     describe('track', function(){
       it('should map basic track', function(){
         test.maps('track-basic');
+      });
+
+      it('should map track with email but no userId', function(){
+        test.maps('track-email-no-userId');
+      });
+
+      it('should map track with userId but no email', function(){
+        test.maps('track-userId-no-email');
       });
 
       it('should map added product track', function(){
@@ -85,6 +103,14 @@ describe('Iterable', function(){
 
       it('should map a more advanced identify', function(){
         test.maps('identify-advanced');
+      });
+
+      it('should map identify with email but no userId', function(){
+        test.maps('identify-email-no-userId');
+      });
+
+      it('should map identify with userId but no email', function(){
+        test.maps('identify-userId-no-email');
       });
     });
   });
