@@ -1,0 +1,13 @@
+{
+  "input": {
+    "type": "identify",
+    "userId": "user-id",
+    "timestamp": "2014"
+  },
+  "output": {
+    "userId": "user-id",
+    "dataFields": {
+      "profileUpdatedAt": "2014-01-01 00:00:00 +00:00"
+    }
+  }
+}

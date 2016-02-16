@@ -1,0 +1,15 @@
+{
+  "input": {
+    "type": "track",
+    "event": "some-event",
+    "userId": "user-id",
+    "timestamp": "2014"
+  },
+  "output": {
+    "eventName": "some-event",
+    "userId": "user-id",
+    "createdAt": 1388534400,
+    "dataFields": {
+    }
+  }
+}

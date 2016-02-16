@@ -1,6 +1,6 @@
 {
   "name": "integration-iterable",
-  "version": "1.1.1",
+  "version": "1.2.3",
   "private": true,
   "description": "Iterable server-side integration",
   "author": "Segment <friends@segment.com>",
@@ -13,11 +13,15 @@
     "test": "make test"
   },
   "dependencies": {
-    "component-clone": "^0.2.2",
+    "@ndhoule/foldl": "^1.0.3",
     "isodate-traverse": "^0.3.2",
     "obj-case": "^0.1.1",
+    "reject": "0.0.1",
     "segmentio-integration": "^3.0.5",
-    "unix-time": "^1.0.1"
+    "type-component": "0.0.1",
+    "unix-time": "^1.0.1",
+    "@ndhoule/pick": "^1.0.2",
+    "@ndhoule/extend": "^1.0.1"
   },
   "devDependencies": {
     "istanbul": "0.x",

@@ -1,0 +1,18 @@
+{
+  "input": {
+    "type": "track",
+    "event": "some-event",
+    "timestamp": "2014",
+    "properties": {
+      "email": "jd@example.com"
+    }
+  },
+  "output": {
+    "eventName": "some-event",
+    "email": "jd@example.com",
+    "createdAt": 1388534400,
+    "dataFields": {
+      "email": "jd@example.com"
+    }
+  }
+}
