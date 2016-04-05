@@ -206,6 +206,18 @@ describe('Iterable', function(){
         .pathname('/api/commerce/trackPurchase')
         .end(done);
     });
+
+    it('should map a Completed Order with template and campaign ids to trackPurchase', function(done){
+      var json = test.fixture('track-purchase-campaign-id');
+
+      test
+        .set(settings)
+        .track(json.input)
+        .sends(json.output)
+        .expects(200)
+        .pathname('/api/commerce/trackPurchase')
+        .end(done);
+    });
   });
 
   describe('.identify()', function(){
