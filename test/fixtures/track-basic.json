@@ -35,9 +35,7 @@
       "prop": true,
       "email": "jd@example.com",
       "amount": 29.99,
-      "revenue": 19.99,
-      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36",
-      "ip": "67.188.108.15"
+      "revenue": 19.99
     }
   }
 }
