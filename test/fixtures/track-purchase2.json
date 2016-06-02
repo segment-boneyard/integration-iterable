@@ -7,7 +7,7 @@
         "version": "2.0.13"
       }
     },
-    "event": "Completed Order",
+    "event": "Order Completed",
     "integrations": {},
     "messageId": "7d050283-681c-4037-a67b-9960451bf130",
     "properties": {
