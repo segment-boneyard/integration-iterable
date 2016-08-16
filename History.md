@@ -1,4 +1,10 @@
 
+1.3.0 / 2016-08-16
+==================
+
+  * update ecommerce spec syntax to v2
+  * include campaignId and templateId for trackPurchase
+
 1.2.3 / 2016-02-16
 ==================
 
