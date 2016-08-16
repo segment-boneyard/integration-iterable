@@ -1,7 +1,7 @@
 {
   "input": {
     "type": "track",
-    "event": "Removed Product",
+    "event": "Product Removed",
     "userId": "some-uid",
     "timestamp": "2014",
     "properties": {

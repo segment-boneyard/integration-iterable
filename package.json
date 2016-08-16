@@ -17,7 +17,7 @@
     "isodate-traverse": "^0.3.2",
     "obj-case": "^0.1.1",
     "reject": "0.0.1",
-    "segmentio-integration": "^3.0.5",
+    "segmentio-integration": "^4.0.0",
     "type-component": "0.0.1",
     "unix-time": "^1.0.1",
     "@ndhoule/pick": "^1.0.2",
@@ -31,7 +31,7 @@
     "mocha": "2.x",
     "ms": "0.x",
     "segmentio-facade": "2.x",
-    "segmentio-integration-tester": "1.x",
+    "segmentio-integration-tester": "2.x",
     "should": "^4.3.0",
     "uid": "0.0.2",
     "unix-time": "^1.0.1"

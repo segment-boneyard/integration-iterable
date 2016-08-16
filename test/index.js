@@ -83,11 +83,11 @@ describe('Iterable', function(){
         test.maps('track-userId-no-email');
       });
 
-      it('should map added product track', function(){
+      it('should map product added track', function(){
         test.maps('track-added-product');
       });
 
-      it('should map removed product track', function(){
+      it('should map product removed track', function(){
         test.maps('track-removed-product');
       });
 
@@ -133,7 +133,7 @@ describe('Iterable', function(){
         .error('cannot POST /api/events/track (401)', done);
     });
 
-    it('should map Added Product to updateCart if there is a cart provided', function(done){
+    it('should map Product Added to updateCart if there is a cart provided', function(done){
       var json = test.fixture('track-added-product');
 
       test
@@ -145,7 +145,7 @@ describe('Iterable', function(){
         .end(done);
     });
 
-    it('should not map Added Product to updateCart if there is no cart provided', function(done){
+    it('should not map Product Added to updateCart if there is no cart provided', function(done){
       var json = test.fixture('track-added-product');
       var input = json.input;
       input = objCase.del(input, 'properties.products');
@@ -158,7 +158,7 @@ describe('Iterable', function(){
         .end(done);
     });
 
-    it('should map Removed Product to updateCart if there is a cart provided', function(done){
+    it('should map Product Removed to updateCart if there is a cart provided', function(done){
       var json = test.fixture('track-removed-product');
 
       test
@@ -170,7 +170,7 @@ describe('Iterable', function(){
         .end(done);
     });
 
-    it('should not map Removed Product to updateCart if there is no cart provided', function(done){
+    it('should not map Product Removed to updateCart if there is no cart provided', function(done){
       var json = test.fixture('track-removed-product');
       var input = json.input;
       input = objCase.del(input, 'properties.products');
@@ -183,7 +183,7 @@ describe('Iterable', function(){
         .end(done);
     });
 
-    it('should map Completed Order to trackPurchase', function(done){
+    it('should map Order Completed to trackPurchase', function(done){
       var json = test.fixture('track-purchase');
 
       test
@@ -195,7 +195,7 @@ describe('Iterable', function(){
         .end(done);
     });
 
-    it('should map a more complex Completed Order to trackPurchase', function(done){
+    it('should map a more complex Order Completed to trackPurchase', function(done){
       var json = test.fixture('track-purchase2');
 
       test
@@ -207,7 +207,7 @@ describe('Iterable', function(){
         .end(done);
     });
 
-    it('should map a Completed Order with template and campaign ids to trackPurchase', function(done){
+    it('should map a Order Completed with template and campaign ids to trackPurchase', function(done){
       var json = test.fixture('track-purchase-campaign-id');
 
       test
