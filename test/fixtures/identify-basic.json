@@ -6,6 +6,7 @@
     "traits": {
       "email": "jd@example.com",
       "created": "2014-01-01",
+      "phone": "12121234567",
       "trait": true
     }
   },
@@ -17,7 +18,8 @@
       "created": "2014-01-01T00:00:00.000Z",
       "met": "2014-01-01T00:00:00.000Z",
       "trait": true,
-      "profileUpdatedAt": "2014-01-01 00:00:00 +00:00"
+      "profileUpdatedAt": "2014-01-01 00:00:00 +00:00",
+      "phoneNumber": "12121234567"
     }
   }
 }
