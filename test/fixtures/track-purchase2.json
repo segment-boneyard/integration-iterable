@@ -24,13 +24,13 @@
       "currency": "USD",
       "discount": 0,
       "email": "test@iterable.com",
-      "orderId": "R550311537",
+      "order_id": "R550311537",
       "products": [
         {
           "category": "pullover_hoodie",
           "color": "royal_blue",
           "gender": "male",
-          "id": "c94cfe418822",
+          "product_id": "c94cfe418822",
           "image_url": "https://loyalist.s3.amazonaws.com/orders/R550311537/line-items/131/images/french_terry_light_weight_pullover_hoodie/front/royal_blue/capybara.jpg",
           "name": "Lacrosse Force Standard Sweatshirt",
           "price": 39.1,
@@ -208,7 +208,7 @@
       "currency": "USD",
       "discount": 0,
       "email": "test@iterable.com",
-      "orderId": "R550311537",
+      "order_id": "R550311537",
       "revenue": "151.9",
       "shipping": "22.99",
       "shipping_address": {
