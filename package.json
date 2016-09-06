@@ -30,8 +30,8 @@
     "merge-util": "^0.1.0",
     "mocha": "2.x",
     "ms": "0.x",
-    "segmentio-facade": "2.x",
-    "segmentio-integration-tester": "2.x",
+    "segmentio-facade": "^3.x",
+    "segmentio-integration-tester": "^2.x",
     "should": "^4.3.0",
     "uid": "0.0.2",
     "unix-time": "^1.0.1"

@@ -13,7 +13,7 @@
       "templateId": 777,
       "products": [
         {
-          "id": "foo-id",
+          "product_id": "foo-id",
           "sku": "foo-sku",
           "name": "foo-name",
           "price": 5.5,
