@@ -130,7 +130,7 @@ describe('Iterable', function(){
       test
         .set({ apiKey: 'x' })
         .track({})
-        .error('cannot POST /api/events/track (401)', done);
+        .error('Unauthorized', done);
     });
 
     it('should map Product Added to updateCart if there is a cart provided', function(done){
@@ -233,7 +233,7 @@ describe('Iterable', function(){
       test
         .set({ apiKey: 'x' })
         .identify({})
-        .error('cannot POST /api/users/update (401)', done);
+        .error('Unauthorized', done);
     });
   });
 
