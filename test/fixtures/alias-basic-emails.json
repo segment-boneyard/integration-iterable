@@ -1,11 +1,11 @@
 {
   "input": {
     "type": "alias",
-    "userId": "xyz@example.com",
+    "userId": "oiye@example.com",
     "previousId": "jd@example.com"
   },
   "output": {
     "currentEmail": "jd@example.com",
-    "newEmail": "xyz@example.com"
+    "newEmail": "oiye@example.com"
   }
 }

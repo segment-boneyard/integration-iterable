@@ -297,7 +297,7 @@ describe('Iterable', function(){
       var json = test.fixture('alias-basic-emails');
       test
         .set(settings)
-        .alias(json.input)
+        .alias(helpers.alias())
         .requests(1)
         .expects(200)
         .pathname('/api/users/updateEmail')

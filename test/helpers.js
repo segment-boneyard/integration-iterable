@@ -13,6 +13,7 @@ var firstId  = uid();
 var secondId = uid();
 var groupId  = uid();
 var email = 'testing-' + firstId + '@segment.io';
+var email2 = 'testing-' + secondId + '@segment.io';
 
 /**
  * Mapper tester.
@@ -264,8 +265,8 @@ exports.group = function(options){
 
 exports.alias = function(options){
   return new facade.Alias(merge({
-    from: firstId,
-    to: secondId,
+    from: email,
+    to: email2,
     channel: 'server',
     timestamp: new Date()
   }, options || {}));
