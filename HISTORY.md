@@ -1,4 +1,11 @@
 
+1.4.0 / 2017-01-31
+==================
+
+  * Standardize integration (linting, Docker configuration, circle.yml, upgrade
+segmentio-integration version, upgrade integration-worker version, etc.)
+
+
 1.3.2 / 2016-09-06
 ==================
 
