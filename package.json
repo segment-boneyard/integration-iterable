@@ -13,16 +13,17 @@
     "test": "make test"
   },
   "dependencies": {
+    "@ndhoule/extend": "^1.0.1",
     "@ndhoule/foldl": "^1.0.3",
+    "@ndhoule/includes": "^1.0.0",
+    "@ndhoule/pick": "^1.0.2",
+    "is": "^3.2.0",
     "isodate-traverse": "^0.3.2",
     "obj-case": "^0.1.1",
     "reject": "0.0.1",
     "segmentio-integration": "^5.1.0",
     "type-component": "0.0.1",
-    "unix-time": "^1.0.1",
-    "@ndhoule/pick": "^1.0.2",
-    "@ndhoule/extend": "^1.0.1",
-    "@ndhoule/includes": "^1.0.0"
+    "unix-time": "^1.0.1"
   },
   "devDependencies": {
     "@segment/eslint-config": "^3.4.0",
@@ -39,6 +40,7 @@
     "segmentio-integration-tester": "^2.x",
     "should": "^4.3.0",
     "uid": "0.0.2",
-    "unix-time": "^1.0.1"
+    "unix-time": "^1.0.1",
+    "moment": "^2.17.1"
   }
 }

@@ -22,6 +22,7 @@
     "properties": {
       "amount": 29.99,
       "revenue": 19.99,
+      "dateExample":"2015-12-10T04:08:31.905Z",
       "email": "jd@example.com",
       "prop": true
     }
@@ -35,7 +36,8 @@
       "prop": true,
       "email": "jd@example.com",
       "amount": 29.99,
-      "revenue": 19.99
+      "revenue": 19.99,
+      "dateExample":"2015-12-10 04:08:31 +00:00"
     }
   }
 }
