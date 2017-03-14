@@ -23,7 +23,7 @@
     "sentAt": "2015-04-15T10:46:50.330Z",
     "timestamp": "2015-04-15T10:46:45.808Z",
     "traits": {
-      "email": "foo@example.com",
+      "email": "jd@example.com",
       "sampleTrait": "bar",
       "userAgent": "THIS ONE, NOT THE ONE FROM CONTEXT"
     },
@@ -32,10 +32,10 @@
     "originalTimestamp": "2015-04-15T10:46:50.320Z"
   },
   "output": {
-    "email": "foo@example.com",
+    "email": "jd@example.com",
     "userId": null,
     "dataFields": {
-      "email": "foo@example.com",
+      "email": "jd@example.com",
       "sampleTrait": "bar",
       "page": {
         "path": "/",

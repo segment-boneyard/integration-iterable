@@ -58,6 +58,15 @@ describe('Iterable', function(){
       test.invalid(msg, settings);
     });
 
+    it('should be invalid when alias call has non-email id', function(){
+      var alias = {
+        type: 'alias',
+        userId: '123',
+        previousId: 'wesley@blah.com'
+      };
+      test.invalid(alias, settings);
+    });
+
     it('should be valid when .userId is missing but .email is present', function(){
       delete msg.userId;
       test.valid(msg, settings);
@@ -111,6 +120,12 @@ describe('Iterable', function(){
 
       it('should map identify with userId but no email', function(){
         test.maps('identify-userId-no-email');
+      });
+    });
+
+    describe('alias', function() {
+      it('should map basic alias', function () {
+        test.maps('alias-basic-emails');
       });
     });
   });
@@ -273,6 +288,19 @@ describe('Iterable', function(){
         .page(helpers.page())
         .requests(1)
         .expects(200)
+        .end(done);
+    });
+  });
+
+  describe('.alias()', function(){
+    it('should update a user\'s email address', function(done){
+      var json = test.fixture('alias-basic-emails');
+      test
+        .set(settings)
+        .alias(helpers.alias())
+        .requests(1)
+        .expects(200)
+        .pathname('/api/users/updateEmail')
         .end(done);
     });
   });

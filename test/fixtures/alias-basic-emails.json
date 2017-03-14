@@ -1,0 +1,11 @@
+{
+  "input": {
+    "type": "alias",
+    "userId": "oiye@example.com",
+    "previousId": "jd@example.com"
+  },
+  "output": {
+    "currentEmail": "jd@example.com",
+    "newEmail": "oiye@example.com"
+  }
+}
