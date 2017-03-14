@@ -1,6 +1,6 @@
 {
   "name": "@segment/integration-iterable",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "Iterable server-side integration",
   "author": "Segment <friends@segment.com>",
   "repository": {

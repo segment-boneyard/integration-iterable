@@ -1,3 +1,7 @@
+1.4.3 / 2017-03-14
+==================
+
+  * Standardize Date formats to prevent uncaught exceptions and match Iterable's requirements.
 
 1.4.0 / 2017-01-31
 ==================
