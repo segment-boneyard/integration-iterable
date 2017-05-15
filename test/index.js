@@ -94,6 +94,10 @@ describe('Iterable', function(){
       it('should map purchase track', function(){
         test.maps('track-purchase');
       });
+
+      it('should pass empty array for `categories` if track.category() is missing', function(){
+        test.maps('track-purchase-no-category');
+      });
     });
 
     describe('identify', function(){
