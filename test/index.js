@@ -8,6 +8,7 @@ var assert = require('assert');
 var Iterable = require('..');
 var objCase = require('obj-case');
 var mapper = require('../lib/mapper');
+var extend = require('@ndhoule/extend');
 
 describe('Iterable', function(){
   var settings;
@@ -103,6 +104,45 @@ describe('Iterable', function(){
     describe('identify', function(){
       it('should map basic identify', function(){
         test.maps('identify-basic');
+      });
+
+      it('should map basic identify if integration has field other than mergeNestedObjects', function(done){
+        var identify = test.fixture('identify-basic');
+        identify.input.integrations = {
+          Iterable: { somenonspeccedfield: true }
+        };
+        test
+          .set(settings)
+          .identify(identify.input)
+          .sends(identify.output)
+          .pathname('/api/users/update')
+          .expects(200, done);
+      });
+
+      it('should map basic identify if mergeNestedObjects is set to true', function(done){
+        var identify = test.fixture('identify-basic');
+        identify.input.integrations = {
+          Iterable: { mergeNestedObjects: true }
+        };
+        test
+          .set(settings)
+          .identify(identify.input)
+          .sends(extend(identify.output, { mergeNestedObjects: true }))
+          .pathname('/api/users/update')
+          .expects(200, done);
+      });
+
+      it('should map basic identify if mergeNestedObjects is set to false', function(done){
+        var identify = test.fixture('identify-basic');
+        identify.input.integrations = {
+          Iterable: { mergeNestedObjects: false }
+        };
+        test
+          .set(settings)
+          .identify(identify.input)
+          .sends(extend(identify.output, { mergeNestedObjects: false }))
+          .pathname('/api/users/update')
+          .expects(200, done);
       });
 
       it('should map a more advanced identify', function(){
