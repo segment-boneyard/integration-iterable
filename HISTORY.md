@@ -1,3 +1,7 @@
+1.4.7 / 2017-05-18
+==================
+  * Add Iterable integration specific mergeNestedObjects option
+
 1.4.6 / 2017-05-15
 ==================
   * Patch improperly passed category array
