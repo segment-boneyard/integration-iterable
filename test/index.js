@@ -157,6 +157,12 @@ describe('Iterable', function(){
         test.maps('identify-userId-no-email');
       });
     });
+
+    describe('screen', function(){
+      it('should map a screen to a track', function(){
+        test.maps('screen-basic');
+      });
+    });
   });
 
   describe('.track()', function(){
@@ -316,6 +322,16 @@ describe('Iterable', function(){
         .set({ trackCategorizedPages: true })
         .page(helpers.page())
         .requests(1)
+        .expects(200)
+        .end(done);
+    });
+  });
+
+  describe('.screen()', function(){
+    it('should work automatically', function(done){
+      test
+        .set(settings)
+        .screen(helpers.screen())
         .expects(200)
         .end(done);
     });
