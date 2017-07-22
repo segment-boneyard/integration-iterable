@@ -320,4 +320,44 @@ describe('Iterable', function(){
         .end(done);
     });
   });
+
+  describe('.screen()', function(){
+    it('should not track automatically', function(done){
+      test
+        .set(settings)
+        .screen(helpers.screen())
+        .requests(0)
+        .end(done);
+    });
+
+    it('should track all screens', function(done){
+      test
+        .set(settings)
+        .set({ trackAllPages: true })
+        .screen(helpers.screen())
+        .requests(1)
+        .expects(200)
+        .end(done);
+    });
+
+    it('should track named screens', function(done){
+      test
+        .set(settings)
+        .set({ trackNamedPages: true })
+        .screen(helpers.screen())
+        .requests(1)
+        .expects(200)
+        .end(done);
+    });
+
+    it('should track category screens', function(done){
+      test
+        .set(settings)
+        .set({ trackCategorizedPages: true })
+        .screen(helpers.screen())
+        .requests(1)
+        .expects(200)
+        .end(done);
+    });
+  });
 });

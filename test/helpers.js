@@ -218,7 +218,8 @@ exports.screen = function(options){
     name: 'Login',
     category: 'Authentication',
     properties: {
-      type: 'Facebook'
+      type: 'Facebook',
+      email: email
     },
     context: {
       ip: '12.212.12.49'
